@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import ContactStrip from "@/components/ContactStrip";
 import type { Metadata } from "next";
 
@@ -15,9 +16,9 @@ const machines = [
 ];
 
 const payments = [
-  { emoji: "🪙", label: "Coins",      badge: "Classic",  badgeCls: "bg-yellow-100 text-yellow-700", sub: "Traditional quarters — simple and always accepted."        },
-  { emoji: "💳", label: "Card",       badge: "Tap & Go", badgeCls: "bg-blue-100 text-blue-700",    sub: "Debit or credit — tap or swipe at the machine."            },
-  { emoji: "📱", label: "Mobile App", badge: "Digital",  badgeCls: "bg-purple-100 text-purple-700",sub: "Download, load funds, and pay from your phone in seconds." },
+  { emoji: "🪙", label: "Coins",          badge: "Always Accepted", badgeCls: "bg-yellow-100 text-yellow-700", sub: "Traditional quarters — drop them in and go."                 },
+  { emoji: "💳", label: "Debit / Credit", badge: "Tap & Go",        badgeCls: "bg-blue-100 text-blue-700",    sub: "Tap or swipe your card right at the machine."                },
+  { emoji: "📱", label: "Airwallet App",  badge: "Free App",        badgeCls: "bg-green-100 text-green-700",  sub: "Download Airwallet free and pay from your phone in seconds." },
 ];
 
 const steps = [
@@ -189,18 +190,28 @@ export default function ServicesPage() {
               </div>
               <h2 className="section-heading">Three ways to pay</h2>
               <p className="section-sub">
-                We offer <strong className="text-slate-700">flexible payment options</strong> including 
-                coins, card, and mobile app — making laundry easier than ever.
+                Coins, card, or the <strong className="text-slate-700">free Airwallet app</strong> —
+                all three options are available on every machine. Use whatever is easiest for you.
               </p>
               <p className="mt-4 text-base leading-relaxed text-slate-500">
-                Whether you prefer traditional coins or modern digital payments, 
-                we&rsquo;ve made it easy for everyone. There&rsquo;s no wrong way to pay.
+                Whether you prefer traditional coins or paying by phone, our machines
+                accept all three. There&rsquo;s no wrong way to pay, and no tech
+                experience required.
               </p>
 
               <div className="relative mt-8 aspect-[4/3] overflow-hidden rounded-2xl shadow-card-md">
                 <Image src="/images/dryers.jpg" alt="Commercial dryers" fill
                   className="object-cover transition-transform duration-500 ease-out hover:scale-[1.03]"
                   sizes="(max-width:1024px) 100vw, 50vw"/>
+              </div>
+
+              <div className="mt-6">
+                <Link href="/payments" className="link-arrow text-base">
+                  Learn how payments work
+                  <svg className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7"/>
+                  </svg>
+                </Link>
               </div>
             </div>
           </div>

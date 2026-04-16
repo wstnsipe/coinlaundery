@@ -150,6 +150,90 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* ══ AIRWALLET PROMO ══════════════════════ */}
+      <section className="section-muted">
+        <div className="section-wrap">
+          <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
+
+            {/* Left — text */}
+            <div>
+              <p className="eyebrow mb-3">Payments Made Simple</p>
+              <h2 className="section-heading">
+                Pay Your Way<br className="hidden sm:block"/> with Airwallet.
+              </h2>
+              <p className="section-sub max-w-lg">
+                Use coins, card, or the Airwallet app for a fast and easy laundry experience.
+              </p>
+              <div className="mt-8 flex gap-3.5 rounded-2xl border border-blue-100 bg-blue-50 p-5">
+                <div className="mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-blue-100 text-blue-600">
+                  <svg className="h-3.5 w-3.5" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7"/>
+                  </svg>
+                </div>
+                <p className="text-sm leading-relaxed text-slate-600">
+                  <strong className="text-slate-800">All three options work on every machine.</strong>{" "}
+                  Coins are always accepted — Airwallet is just an extra way to pay if you prefer your phone.
+                </p>
+              </div>
+              <div className="mt-8">
+                <Link href="/payments" className="btn-primary px-7 py-4 text-base">
+                  <svg className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"/>
+                  </svg>
+                  How Payments Work
+                </Link>
+              </div>
+            </div>
+
+            {/* Right — payment method cards */}
+            <div className="flex flex-col gap-3">
+              {[
+                {
+                  emoji: "🪙",
+                  label: "Coins",
+                  sub: "Traditional quarters — always accepted",
+                  accent: "border-yellow-200 bg-yellow-50",
+                  dot: "bg-yellow-400",
+                },
+                {
+                  emoji: "💳",
+                  label: "Debit / Credit Card",
+                  sub: "Tap or swipe right at the machine",
+                  accent: "border-blue-200 bg-blue-50",
+                  dot: "bg-blue-500",
+                },
+                {
+                  emoji: "📱",
+                  label: "Airwallet App",
+                  sub: "Download free and pay from your phone",
+                  accent: "border-green-200 bg-green-50",
+                  dot: "bg-green-500",
+                },
+              ].map(({ emoji, label, sub, accent, dot }) => (
+                <div key={label}
+                  className={`flex items-center gap-5 rounded-2xl border px-6 py-5 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-card-md ${accent}`}>
+                  <span className="shrink-0 text-3xl">{emoji}</span>
+                  <div className="min-w-0 flex-1">
+                    <p className="text-[15px] font-bold text-slate-900">{label}</p>
+                    <p className="mt-0.5 text-sm text-slate-500">{sub}</p>
+                  </div>
+                  <span className={`h-2.5 w-2.5 shrink-0 rounded-full ${dot}`}/>
+                </div>
+              ))}
+
+              <Link href="/payments"
+                className="flex items-center justify-center gap-2 rounded-2xl border border-slate-200 bg-white py-3.5 text-sm font-bold text-slate-600 shadow-card transition-all duration-200 hover:-translate-y-0.5 hover:border-blue-200 hover:text-blue-700 hover:shadow-card-md">
+                See all payment details
+                <svg className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7"/>
+                </svg>
+              </Link>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
       {/* ══ PAYMENT ══════════════════════════════ */}
       <section className="relative overflow-hidden bg-slate-950 py-20 sm:py-28 noise">
         <div className="pointer-events-none absolute -left-40 -top-40 h-[500px] w-[500px] rounded-full bg-blue-800/15 blur-3xl"/>
