@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 import ContactStrip from "@/components/ContactStrip";
 import type { Metadata } from "next";
 
