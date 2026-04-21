@@ -42,9 +42,12 @@ const contactItems = [
     label: "Hours",
     content: (
       <>
-        <p className="text-lg font-bold text-slate-900">Hours coming soon</p>
+        <p className="flex items-center gap-2 text-lg font-bold text-slate-900">
+          <span className="inline-block h-2.5 w-2.5 rounded-full bg-green-500 shrink-0"/>
+          Open Daily: 7am – 10pm
+        </p>
         <p className="mt-1 text-sm leading-relaxed text-slate-500">
-          We&rsquo;re finalizing our hours. Call us or check back for updates.
+          Every day of the week, including weekends and holidays.
         </p>
         <a href="tel:2565727011"
           className="link-arrow mt-3">

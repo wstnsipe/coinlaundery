@@ -363,7 +363,7 @@ export default function HomePage() {
                 {[
                   { emoji: "📍", text: "11687 US-431, Guntersville, AL 35976" },
                   { emoji: "📞", text: "(256) 572-7011"                        },
-                  { emoji: "🕐", text: "Hours coming soon"                     },
+                  { emoji: "🕐", text: "Open Daily: 7am – 10pm"                },
                   { emoji: "🚗", text: "Free parking directly out front"       },
                 ].map(({ emoji, text }) => (
                   <li key={text} className="flex items-center gap-3 text-sm font-medium text-slate-700">

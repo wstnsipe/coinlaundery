@@ -120,8 +120,11 @@ export default function Footer() {
               <h3 className="mb-5 text-[10px] font-extrabold uppercase tracking-[0.12em] text-slate-500">
                 Hours
               </h3>
-              <p className="text-sm font-semibold text-white">Hours coming soon</p>
-              <p className="mt-1 text-sm text-slate-500">Check back for updates.</p>
+              <p className="flex items-center gap-2 text-sm font-bold text-white">
+                <span className="inline-block h-2 w-2 rounded-full bg-green-500 shrink-0"/>
+                Open Daily: 7am – 10pm
+              </p>
+              <p className="mt-1 text-sm text-slate-500">Every day, including weekends.</p>
               <a href="https://maps.google.com/?q=11687+US-431+Guntersville+AL+35976"
                 target="_blank" rel="noopener noreferrer"
                 className="mt-5 inline-flex items-center gap-2 rounded-xl bg-blue-600 px-4 py-2.5 text-xs font-bold text-white shadow-blue transition-all duration-200 hover:-translate-y-0.5 hover:bg-blue-700 hover:shadow-blue-lg active:scale-[0.97]">
